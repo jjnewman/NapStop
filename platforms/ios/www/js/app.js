@@ -21,7 +21,7 @@ var netherTest = angular.module('NetherTest', ['ngResource', 'ngRoute', 'LocalSt
 
 netherTest.controller('NetherTestController', function($scope, $resource, $interval, localStorageService) {
 
-  var averageSpeed = 30; var refreshInterval = 5000; var proximity = 5;
+  var averageSpeed = 15; var refreshInterval = 500; var proximity = 1; var vibeTime = 2500; var beepTime = 3;
 
   var savedLocations = localStorageService.get('savedLocations');
   $scope.savedLocations = savedLocations || [];
@@ -94,8 +94,8 @@ function getDistanceBetween(lat1,lon1,lat2,lon2) {
     $scope.distanceBetween = Math.round(d * 10) / 10;
 
     if (d < 1) {
-      navigator.notification.vibrate(2500);
-      navigator.notification.beep(3);
+      navigator.notification.vibrate(vibeTime);
+      navigator.notification.beep(beepTime);
         };
   };
 

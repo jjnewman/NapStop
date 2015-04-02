@@ -26,7 +26,8 @@ netherTest.controller('NetherTestController', function($scope, $resource, $inter
  $scope.$watch('savedLocations', function() { localStorageService.set('savedLocations', $scope.savedLocations); }, true);
 
 
- var averageSpeed = 15; var refreshInterval = 5000; var proximity = 1;
+ var averageSpeed = 15; var refreshInterval = 500; var proximity = 0.5;
+ var vibeTime = 2500; var beepTime = 3;
  var defaultLocation = { location: 'loading', lon: 0, lat: 0, area: 'loading'};
 
  var input = document.getElementById('search');
@@ -100,8 +101,8 @@ netherTest.controller('NetherTestController', function($scope, $resource, $inter
  };
 
  function alertPhone() {
-   navigator.notification.vibrate(2500);
-   navigator.notification.beep(3);
+   navigator.notification.vibrate(vibeTime);
+   navigator.notification.beep(beepTime);
  };
 
  function initVariables() {

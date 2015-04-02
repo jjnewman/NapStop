@@ -21,7 +21,7 @@ var netherTest = angular.module('NetherTest', ['ngResource', 'ngRoute', 'LocalSt
 
 netherTest.controller('NetherTestController', function($scope, $resource, $interval, localStorageService) {
 
-  var averageSpeed = 30; var refreshInterval = 5000; var proximity = 5;
+  var averageSpeed = 15; var refreshInterval = 500; var proximity = 1;
 
   var savedLocations = localStorageService.get('savedLocations');
   $scope.savedLocations = savedLocations || [];

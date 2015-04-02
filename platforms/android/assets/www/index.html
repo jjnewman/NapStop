@@ -20,7 +20,7 @@
 
   <header>
     <br>
-    <center><b><i>Nap</b>Stop</i></center>
+    <center><b><h4><i>Nap</b>Stop</i></h4></center>
 
   </header>
 
@@ -83,7 +83,7 @@
   <a href="#menu" id="toggle" ng-model="theToggle"><span></span></a>
     <div id="menu">
       <ul>
-        <li ng-repeat="location in savedLocations |limitTo:-3" ng-click="sleep(location)">
+        <li ng-repeat="location in savedLocations | limitTo:-3" ng-click="sleep(location)">
           :: {{location.location}}
         </li>
       </ul>
