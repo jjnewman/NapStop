@@ -11,3 +11,5 @@ Built using JavaScript with jQuery and AngularJS. PhoneGap framework was used to
 
 
 This was a "Makerthon" 3 day project with a team of four. Yes, I did star in the video but I also made a significant contribution to the back-end code development (a far more enjoyable experience...).
+
+[![Code Climate](https://codeclimate.com/github/jjnewman/NapStop/badges/gpa.svg)](https://codeclimate.com/github/jjnewman/NapStop)
